@@ -1,0 +1,83 @@
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(2px); // subtle blur for elegance
+  padding: 20px; // allows breathing space on small screens
+}
+
+.modalContent {
+  background: #ffffff;
+  padding: 30px 24px;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  animation: fadeInScale 0.3s ease-out;
+  transition: all 0.3s ease;
+
+  h2 {
+    font-size: 20px;
+    margin-bottom: 16px;
+    color: #222;
+  }
+
+  p {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 24px;
+  }
+
+  .modalActions {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 10px;
+
+    button {
+      flex: 1;
+      padding: 10px 16px;
+      border: none;
+      border-radius: 8px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+
+      &.confirm {
+        background-color: #22c55e;
+        color: white;
+
+        &:hover {
+          background-color: #16a34a;
+        }
+      }
+
+      &.cancel {
+        background-color: #f3f4f6;
+        color: #333;
+
+        &:hover {
+          background-color: #e5e7eb;
+        }
+      }
+    }
+  }
+}
+
+@keyframes fadeInScale {
+  0% {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

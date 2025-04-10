@@ -1,0 +1,59 @@
+.movieCard {
+    width: 250px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(255, 165, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    color: #0f172a;
+    margin: 1rem;
+  
+    &.dark {
+      background-color: #0f0f0f;
+      color: rgb(47, 255, 0);
+      box-shadow: 0 2px 12px rgba(255, 165, 0, 0.3);
+    }
+  
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 20px rgba(255, 165, 0, 0.4);
+    }
+  
+    .imageContainer {
+      width: 100%;
+      height: 370px;
+      overflow: hidden;
+  
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+      }
+  
+      &:hover img {
+        transform: scale(1.05);
+      }
+    }
+  
+    .info {
+      padding: 12px;
+  
+      h4 {
+        font-size: 16px;
+        margin-bottom: 6px;
+        font-weight: bold;
+        color: inherit; // inherit orange in dark, black in light
+      }
+  
+      p {
+        font-size: 13px;
+        line-height: 1.4;
+        opacity: 0.9;
+        color: inherit;
+      }
+    }
+  }
+  
